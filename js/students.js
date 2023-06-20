@@ -134,7 +134,8 @@ function getPage(p) {
 
 filter.addEventListener("change", function () {
   let filtering = filter.value;
-  ageOrder = filtering === "asc" ? "asc" : filtering === "desc" ? "desc" : "";
+  ageOrder = filtering === "true" ? "asc" : filtering === "false" ? "desc" : "";
+  console.log(ageOrder);
 
   getStudentData(teacherId);
 });
